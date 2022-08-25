@@ -1,6 +1,6 @@
 [package]
 name = "wallpepper"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 description = "A tool to display videos and SDL content as a wallpaper on linux minimalist window managers using Xorg"
 license = "GPL-3.0-only"
