@@ -14,7 +14,7 @@ use crate::wallpapers::Wallpaper;
 mod args;
 mod wallpapers;
 
-const TEST: bool = true;
+const TEST: bool = false;
 const TEST_WIDTH: u32 = 1920 / 4;
 const TEST_HEIGHT: u32 = 1080 / 4;
 
