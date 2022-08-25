@@ -1,4 +1,4 @@
-use std::ffi::c_ulong;
+use std::os::raw::c_ulong;
 use std::process::exit;
 use std::thread;
 use std::time::Duration;
