@@ -20,4 +20,5 @@ features = ["image"]
 
 [dependencies.x11]
 version = "2.20.0"
+default-features = false
 features = ["xlib"]
