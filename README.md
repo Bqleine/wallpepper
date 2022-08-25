@@ -7,6 +7,9 @@ You can either run it from source or install it with :
 $ cargo install wallpepper
 ```
 
+### Dependencies
+To run this, you will need ffmpeg and SDL2 installed via your package manager along with their header files (sometimes bundled together, just look it up on your distro's wiki)
+
 ## Usage
 The basic usage for wallpepper is as follows :
 ```
