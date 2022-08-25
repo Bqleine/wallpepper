@@ -1,0 +1,23 @@
+[package]
+name = "wallpepper"
+version = "1.0.0"
+edition = "2021"
+description = "A tool to display videos and SDL content as a wallpaper on linux minimalist window managers using Xorg"
+license = "GNU GPLv3"
+readme = "README.md"
+keywords = ["wallpaper", "X11", "Xorg", "video", "SDL2"]
+categories = ["graphics", "multimedia::video"]
+homepage = "https://github.com/bqleine/wallpepper"
+repository = "https://github.com/bqleine/wallpepper"
+
+[dependencies]
+ffmpeg-next = "5.1.1"
+
+[dependencies.sdl2]
+version = "0.35.2"
+default-features = false
+features = ["image"]
+
+[dependencies.x11]
+version = "2.20.0"
+features = ["xlib"]
