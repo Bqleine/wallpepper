@@ -5,6 +5,7 @@ use std::time::Duration;
 
 use crate::args::parse_args;
 use sdl2::event::Event;
+use sdl2::gfx::framerate::FPSManager;
 use sdl2::video::Window;
 use sdl2::VideoSubsystem;
 use x11::xlib::{XDefaultRootWindow, XOpenDisplay};
@@ -43,7 +44,8 @@ fn main() {
         }
     };
 
-    let frame_rate = Duration::from_millis((1000.0 / wallpaper.frame_rate()) as u64);
+    let mut frame_rate = FPSManager::new();
+    frame_rate.set_framerate(wallpaper.frame_rate() as u32).unwrap();
 
     'a: loop {
         for event in event_pump.poll_iter() {
@@ -55,7 +57,7 @@ fn main() {
         wallpaper.draw(&mut canvas);
 
         canvas.present();
-        thread::sleep(frame_rate);
+        frame_rate.delay();
     }
 }
 
