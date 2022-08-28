@@ -1,6 +1,8 @@
 # Wallpepper
 A tool to display videos and SDL content as a wallpaper on linux minimalist window managers using Xorg
 
+![](/home/bloup/Code/wallpepper/example.mp4)
+
 ## Installing
 You can either run it from source or install it with :
 ```

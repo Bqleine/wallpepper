@@ -1,7 +1,5 @@
 use std::os::raw::c_ulong;
 use std::process::exit;
-use std::thread;
-use std::time::Duration;
 
 use crate::args::parse_args;
 use sdl2::event::Event;
@@ -45,7 +43,9 @@ fn main() {
     };
 
     let mut frame_rate = FPSManager::new();
-    frame_rate.set_framerate(wallpaper.frame_rate() as u32).unwrap();
+    frame_rate
+        .set_framerate(wallpaper.frame_rate() as u32)
+        .unwrap();
 
     'a: loop {
         for event in event_pump.poll_iter() {

@@ -1,6 +1,7 @@
 use sdl2::render::WindowCanvas;
 
 mod chroma;
+mod outrun;
 mod video;
 
 pub trait Wallpaper {
@@ -16,7 +17,7 @@ pub trait Wallpaper {
 
     /// The number of times per second the wallpaper is redrawn, keeping this as default should be good for most cases.
     fn frame_rate(&self) -> f64 {
-        60.0
+        30.0
     }
 }
 
@@ -28,6 +29,7 @@ pub fn get_wallpaper_by_name(
     Ok(match name {
         "chroma" => Box::new(chroma::Chroma::new(wallpaper_args)?),
         "video" => Box::new(video::Video::new(wallpaper_args)?),
+        "outrun" => Box::new(outrun::Outrun::new(wallpaper_args)?),
         _ => return Err("Unknown wallpaper type"),
     })
 }
