@@ -18,14 +18,23 @@ The basic usage for wallpepper is as follows :
 $ wallpepper <wallpaper> [wallpaper args]
 ```
 
-Currently, only two wallpapers are supported:
+Currently, three wallpapers are supported:
 - chroma, which is just a rainbow
 - video, which will display the video file specified in a loop using ffmpeg
+- outrun, which displays a cool outrun sunset animation
 
 ### Example usage
 ```
 $ wallpepper chroma
 $ wallpepper video path/to/video.mp4
+```
+
+### Launching at startup
+You may want to add this to your `.xinitrc` to have your wallpaper of choice started automatically :
+```bash
+# ...
+wallpepper video ~/Videos/mycoolwallpaper.mp4 &
+exec dwm # or whatever your window manager is
 ```
 
 ## How it works
